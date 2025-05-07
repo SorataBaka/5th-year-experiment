@@ -2,6 +2,8 @@
 
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{{./images/}}
 
 % chktex-file 44
 
@@ -24,7 +26,7 @@
 その後, 数回に渡り, 「ゴルフ禁止令」が発令された. しかし, 1502年当時の国王シェームス4世は, 自分がゴルフをしたかったために, このゴルフ禁止令を解消した. そして, 人々は再びゴルフを楽しむようになったのである. お隣のイングランドへも, この頃にゴルフが伝わったとされている. 
 
 \section{ゴルフの道具}
-ゴルフをするにはなんといってもクラブとボールがなければ始まらない. クラブとボールの規格はルールで厳しく制限され, 選手は14本のクラブまで使用して良いことになっている\cite{GOLFRULE}. このクラブセッティングが選手の成績に大きく影響する. 表\ref{wood-data}, \ref{iron-data}に主なクラブの名称, 飛距離などを記述する.
+ゴルフをするにはなんといってもクラブとボールがなければ始まらない. クラブとボールの規格はルールで厳しく制限され, 選手は14本のクラブまで使用して良いことになっている~\cite{GOLFRULE}. このクラブセッティングが選手の成績に大きく影響する. 表~\ref{wood-data},~\ref{iron-data}に主なクラブの名称, 飛距離などを記述する.
 \begin{table}[htb]
   \caption{表 1: ウッドの種類}\label{wood-data}
   \begin{center}
@@ -92,7 +94,50 @@
 \end{description}
 
 \section{ドライバーの飛距離}
-ドライバーの飛距離はトッププロだと300ヤードを楽に超える。飛距離はヘッドスピードとクラブの反発係数に依存する。距離を$D$, ヘッドスピードを$S$, 打ち出し角度を\theta, クラブの反発係数を$R$とすると 式のような関係式が成り立つ\cite{GOLFRULE}
+ドライバーの飛距離はトッププロだと300ヤードを楽に超える。飛距離はヘッドスピードとクラブの反発係数に依存する。距離を$D$, ヘッドスピードを$S$, 打ち出し角度を$\theta$, クラブの反発係数を$R$とすると 式のような関係式が成り立つ\cite{GOLFRULE}.
+\begin{equation}\label{eq1}
+  D=\frac{R\cdot S^2}{\log_e132}\sin\theta
+\end{equation}
+
+ちなみに,~(\ref{eq1})式は超テキトーである.
+
+\section{四大メジャーと期待選手}
+ゴルフの名誉ある最大規模の大会として以下の四大メジャートーナメントがある. これらのトーナメントを制してはじめて起一流の称号を与えられる。賞金も凄いが, その名誉となると金銭には変えられない価値がある.
+
+\begin{enumerate}
+  \item マスターズ
+  \item 全英オープン
+  \item 全名オープン
+  \item 全名プロ選手権
+\end{enumerate}
+図\ref{woods}にタイガーウッズ (53歳)の写真を掲載する. これまでに, 4大メジャー大会を計15回制覇し, PGA賞金王には10度輝いている.　一時期, 調子を落とし, 2008年以降, メジャー大会での優勝からは遠ざかってしまっていたが, 2019年のマスターズで復活優勝を果足した. 今年のマスターズでも, 持病の影響からスコアを落とし, 決勝トーナメントへ進出にはならなかった.
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics[width=0.5\linewidth]{tiger.jpg}
+    \caption{世界の帝王T. ウッズ}
+  \end{center}
+\end{figure}\label{woods}
+\vspace{-1.5em}
+図\ref{kitai}に活躍を期待される２名の日本じ選手を紹介する.\\
+\indent(\subref{matsuyama})は日本のホープ松山英樹選手. 2021年度のマスターズで遂にアジア人として奇跡の初優勝を飾る. ずっとメジャー戦優勝を期待できる唯一の日本人と期待してはいたが, 今でもしんじられないくらいの快挙である. 彼はメンタルも強いが, 肝心なところでのポカミスがなければ4大メジャー大会制覇も夢ではない.\\
+\indent(\subref{furue})は女子プロの古江彩佳選手. 優勝回数はまだ多くはないが, 安定した成績で常にランキング上位に位置する実力者である. 彼女の特徴は飛距離が全然出ないがコントロールが素晴らしいこと. クラブをぶん回してダイナミックに飛ばす彼女プロが多い中で異彩を放つ存在である.
+
+\begin{figure}[htb]
+  \centering
+    \begin{subfigure}{0.25\linewidth}
+      \includegraphics[width=\linewidth]{matuyama.jpg}
+      \caption{松山英樹}\label{matsuyama}
+    \end{subfigure}
+    \hspace{0.04\linewidth}
+    \begin{subfigure}{0.20\linewidth}
+      \includegraphics[width=\linewidth]{furue.jpg}
+      \caption{古江彩佳}\label{furue}
+    \end{subfigure}
+    \caption{私の期待}\label{kitai}
+\end{figure}
+
+\vspace{-2em}
+
 \begin{thebibliography}{99}
   \bibitem{JINSEI} 穴掘好雄, ''俺のゴルフ人生'', OB出版, 2016.
   \bibitem{GOLFRULE} M. Jackson and J. Madonna, ``Official Golf Rule'', Sports science, 2011 
